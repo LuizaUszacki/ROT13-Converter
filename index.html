@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ConvertROT13</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luiza Pereira Uszacki">
+    <meta name="descrition" content="No ConvertROT13 você é capaz de converter o seu texto para ROT13, substituindo cada letra por outra que esteja 13 posições à frente ou atrás no alfabeto.">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Kdam+Thmor+Pro&family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js" defer></script>
+    <script type="module" src="setMainHeight.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <h1 class="text-logo" id="test">Convert<span class="rot-logo">ROT13</span></h1>
+    </header>
+    <main>
+        <form class="form-convert" action="#second-text">
+            <label for="first-text">Your text:</label>
+            <textarea id="first-text" cols="20" rows="10" placeholder="Enter your text..." maxlength="320" required></textarea>
+            <label for="first-text">Converted text:</label>
+            <textarea id="second-text" cols="20" rows="10" placeholder="Converted text" disabled></textarea>
+            <div class="buttons">
+                <button type="submit" id="submit-btn" class="btn">Convert</button>
+                <button type="reset" id="reset-btn" class="btn">Reset</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="social-media">
+            <h2 class="text-logo">Convert<span class="rot-logo">ROT13</span></h2>
+            <div class="items-social-media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="made-with-love">
+            <em>
+                Made with
+                <i class="fa-solid fa-heart footer-love"></i>
+                by 
+                <span id="author-name" class="footer-love">Luiza Pereira Uszacki</span>
+            </em>
+        </div>
+    </footer>
+</body>
+</html>
