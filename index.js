@@ -1,4 +1,4 @@
-export const $ = (x) => document.querySelector(x)
+const $ = (x) => document.querySelector(x)
 
 $("#submit-btn").addEventListener('click', () => {
     let text = $("#first-text").value
@@ -11,6 +11,8 @@ $("#submit-btn").addEventListener('click', () => {
         console.log(e)
     }
 })
+
+console.log(document.querySelector('main').offsetHeight)
 
 function rot13(message){
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'

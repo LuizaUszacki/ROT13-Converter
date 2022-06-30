@@ -1,0 +1,159 @@
+// ---Reset-------------------------------------------
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// ---Variables---------------------------------------
+$main-color: hsl(240, 90%, 70%);
+$secondary-color: #333;
+$white-logo: #fff;
+$footer-details: #111;
+
+// ---Inheritance-------------------------------------
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.style-text-logo {
+    color: $white-logo;
+    text-align: center;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.style-span-logo {
+    color: $main-color;
+    font-size: 1.2em;
+    font-family: "Rubik", sans-serif;
+}
+
+// ---Html and Body-----------------------------------
+html, 
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    @extend .flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// ---Header------------------------------------------
+header,
+footer {
+    width: 100vw;
+    background: $secondary-color;
+}
+
+header {
+    .text-logo {
+        @extend .style-text-logo;
+        padding: 3rem 0;
+    }
+}
+
+.span-logo {
+    @extend .style-span-logo;
+}
+
+// ---Main-----------------------------------------
+main {
+    @extend .flex;
+    flex: 1;
+    width: 100vw;
+    margin-block: auto;
+    background: #f3f3f3;
+}
+
+.form-convert {
+    @extend .flex;
+    flex-direction: column;
+    padding: 5rem 0;
+
+    textarea {
+        width: 320px;
+        padding: 20px 30px;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 1rem;
+        resize: none;
+        box-shadow: 2px 2px 4px #555;
+    }
+
+    label {
+        padding-bottom: 10px;
+        color: $secondary-color;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-family: sans-serif;
+        letter-spacing: 0.8px;
+    }
+}
+
+.btn {
+    width: 8rem;
+    padding-block: 0.5rem;
+    margin-top: 1.5rem;
+    color: $white-logo;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    border-radius: 50rem;
+    border: none;
+    background-color: $main-color;
+    cursor: pointer;
+}
+
+button + button {
+    margin-left: 20px;
+}
+
+// ---Footer------------------------------------------
+.text-logo {
+    @extend .style-text-logo;
+}
+
+.social-media {
+    @extend .flex;
+    flex-direction: column;
+    padding: 2.5rem 0;
+
+    .items-social-media {
+        @extend .flex;
+        justify-content: space-between;
+        width: 100px;
+        margin-top: 0.8rem;
+        font-size: 1.2rem;
+    
+        a {
+            color: $white-logo;
+        }
+    }
+}
+
+.made-with-love {
+    @extend .flex;
+    background-color: $footer-details;
+    padding: 1rem 0;
+
+    em {
+        color: $white-logo;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-family: sans-serif;
+
+        .footer-love {
+            color: $main-color;
+            font-weight: 600;
+        }
+    }
+}
+
+@import 'main-responsive';

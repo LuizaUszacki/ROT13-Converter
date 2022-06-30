@@ -1,0 +1,38 @@
+@media (max-width: 300px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        display: block;
+        margin: 0;
+    }
+
+    .form-convert textarea {
+        width: 80%;
+    }
+
+    #submit-btn {
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+    }
+
+    .form-convert {
+        padding: 4rem 0;
+    }
+
+    header .text-logo {
+        padding: 2.5rem 0;
+    }
+    .social-media {
+        padding: 1.8rem 0;
+    }
+
+    .made-with-love em {
+        font-size: 0.8rem;
+    }
+}
