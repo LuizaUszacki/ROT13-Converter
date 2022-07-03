@@ -1,3 +1,16 @@
+@media (max-width: 790px) {
+    .error-container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 450px) {
+    .error-container {
+        width: 80%;
+    }
+}
+
+
 @media (max-width: 300px) {
     h1 {
         font-size: 1.5rem;
@@ -12,17 +25,20 @@
         margin: 0;
     }
 
-    .form-convert textarea {
-        width: 80%;
+    button + button {
+        margin-left: 0;
     }
 
     #submit-btn {
-        margin-right: 0;
         margin-bottom: 0.8rem;
     }
 
     .form-convert {
         padding: 4rem 0;
+
+        textarea {
+            width: 100%;
+        }
     }
 
     header .text-logo {

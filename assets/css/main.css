@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .flex, .made-with-love, .social-media .items-social-media, .social-media, .form-convert, main, body {
@@ -22,6 +23,19 @@
   font-family: "Rubik", sans-serif;
 }
 
+.button-style, .error-container button, .btn {
+  width: 8rem;
+  padding-block: 0.5rem;
+  margin-top: 1.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  border-radius: 50rem;
+  border: none;
+  background-color: hsl(240deg, 90%, 70%);
+  cursor: pointer;
+}
+
 html,
 body {
   min-width: 100vw;
@@ -34,6 +48,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 header,
@@ -71,25 +86,49 @@ main {
   color: #333;
   font-weight: 600;
   text-transform: capitalize;
-  font-family: sans-serif;
   letter-spacing: 0.8px;
 }
 
 .btn {
-  width: 8rem;
-  padding-block: 0.5rem;
-  margin-top: 1.5rem;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: bolder;
-  border-radius: 50rem;
-  border: none;
-  background-color: hsl(240deg, 90%, 70%);
-  cursor: pointer;
+  transition: transform 0.3s, letter-spacing 0.3s, text-shadow 0.3s, background-color 0.3s;
+}
+.btn:hover {
+  transform: scale(1.08);
+  letter-spacing: 1px;
+  background-color: #7c7cf8;
+  text-shadow: 0 0 0.8rem rgba(255, 255, 255, 0.5);
 }
 
 button + button {
   margin-left: 20px;
+}
+
+.error-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 40vw;
+  padding: 1.5rem 3rem;
+  border: 5px solid hsl(240deg, 90%, 70%);
+}
+.error-container h2 {
+  font-size: 1.2rem;
+}
+.error-container p {
+  margin-block: 2rem;
+  font-size: 1rem;
+}
+.error-container-open {
+  overflow: hidden;
+}
+.error-container::-webkit-backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+.error-container::backdrop {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .social-media {
@@ -121,6 +160,16 @@ button + button {
   font-weight: 600;
 }
 
+@media (max-width: 790px) {
+  .error-container {
+    width: 60%;
+  }
+}
+@media (max-width: 450px) {
+  .error-container {
+    width: 80%;
+  }
+}
 @media (max-width: 300px) {
   h1 {
     font-size: 1.5rem;
@@ -135,17 +184,19 @@ button + button {
     margin: 0;
   }
 
-  .form-convert textarea {
-    width: 80%;
+  button + button {
+    margin-left: 0;
   }
 
   #submit-btn {
-    margin-right: 0;
     margin-bottom: 0.8rem;
   }
 
   .form-convert {
     padding: 4rem 0;
+  }
+  .form-convert textarea {
+    width: 100%;
   }
 
   header .text-logo {

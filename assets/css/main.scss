@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 // ---Variables---------------------------------------
@@ -30,6 +31,19 @@ $footer-details: #111;
     font-family: "Rubik", sans-serif;
 }
 
+.button-style {
+    width: 8rem;
+    padding-block: 0.5rem;
+    margin-top: 1.5rem;
+    color: $white-logo;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    border-radius: 50rem;
+    border: none;
+    background-color: $main-color;
+    cursor: pointer;
+}
+
 // ---Html and Body-----------------------------------
 html, 
 body {
@@ -44,6 +58,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 // ---Header------------------------------------------
@@ -93,27 +108,65 @@ main {
         color: $secondary-color;
         font-weight: 600;
         text-transform: capitalize;
-        font-family: sans-serif;
         letter-spacing: 0.8px;
     }
 }
 
 .btn {
-    width: 8rem;
-    padding-block: 0.5rem;
-    margin-top: 1.5rem;
-    color: $white-logo;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    border-radius: 50rem;
-    border: none;
-    background-color: $main-color;
-    cursor: pointer;
+    @extend.button-style;
+    $transitionTime: .3s;
+    transition: transform $transitionTime, 
+                letter-spacing $transitionTime, 
+                text-shadow $transitionTime, 
+                background-color $transitionTime;
+
+    &:hover {
+        transform: scale(1.08);
+        letter-spacing: 1px;
+        background-color: lighten($main-color, 3);
+        text-shadow: 0 0 .8rem rgba(255, 255, 255, 0.5);
+    }
 }
 
 button + button {
     margin-left: 20px;
 }
+
+// ---Error Message-----------------------------------
+.error-container {   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 40vw;
+    padding: 1.5rem 3rem;
+    border: 5px solid $main-color;
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        margin-block: 2rem;
+        font-size: 1rem;
+    }
+
+    button {
+        @extend.button-style;
+    }
+    
+    &-open {
+        overflow: hidden;
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+}
+
 
 // ---Footer------------------------------------------
 .text-logo {
