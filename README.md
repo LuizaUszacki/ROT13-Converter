@@ -2,7 +2,9 @@
 
 ## Sobre o site
 Com o ConvertROT13 é possível encriptar as palavras passando as letras para outras letras do alfabeto que estejam 13 posições à frente ou atrás no alfabeto.
-Para encriptar uma palavra, basta digitá-la na primeira caixa de texto e clicar em "Convert" (Converter) e sua palavra encriptada aparece na segunda caixa de texto.  
+Para encriptar uma palavra, basta digitá-la na primeira caixa de texto e ela será convertida na segunda.
+Se quiser copy a palavra encriptada, é possível fazer isso apenas clicando no botão "Copy" (copiar).
+Se tentar copiar o texto sem ter escrito nada, aparecerá uma mensagem de erro.
 Para o caso de escrever muito texto na caixa de texto e decidir apagá-lo para escrever outra palavra ou texto, basta cricar em "Reset" e o texto será apagado.
 
 <div align="center">

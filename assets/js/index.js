@@ -41,18 +41,17 @@ function copyText() {
         errorContainer.showModal()
 
         okButton.addEventListener('click', () => {
+            fistInputText.value = secondInputText.value = ''
             errorContainer.close()
             startTyping()
         })
     }
 }
 
-
 function startTyping() {
     window.scrollTo(0, 0)
     fistInputText.focus()
 }
-
 
 function changeTexttoRot13(message){
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
