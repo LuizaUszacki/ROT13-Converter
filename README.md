@@ -7,8 +7,6 @@ Se quiser copy a palavra encriptada, é possível fazer isso apenas clicando no 
 Se tentar copiar o texto sem ter escrito nada, aparecerá uma mensagem de erro.
 Para o caso de escrever muito texto na caixa de texto e decidir apagá-lo para escrever outra palavra ou texto, basta cricar em "Reset" e o texto será apagado.
 
-**Website:** https://luizauszacki.github.io/ROT13-Converter/
-
 <div align="center">
   <img src="https://user-images.githubusercontent.com/105115163/176812776-7fbbf8f6-2b12-4f90-a18d-cb8290415651.png" height="400">
   <p>ConvertROT13 para desktop</p>
